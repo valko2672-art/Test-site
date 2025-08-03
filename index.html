@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест эмоционального состояния | Дина Перу - Психолог</title>
+    <meta name="description" content="Проверьте свое эмоциональное состояние за 3 минуты. Персональные рекомендации от психолога Дины Перу.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h2>Дина Перу</h2>
+                    <span>Психолог • Коуч • Автор курсов</span>
+                </div>
+                <nav class="nav">
+                    <a href="#about">О методе</a>
+                    <a href="#reviews">Отзывы</a>
+                    <a href="#contact">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Проверьте свое эмоциональное состояние за 3 минуты</h1>
+                    <p class="hero-subtitle">Получите персональный анализ и рекомендации для улучшения качества жизни</p>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span class="benefit-icon">✨</span>
+                            <span>Научно обоснованный тест</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">🎯</span>
+                            <span>Персональные рекомендации</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">🔒</span>
+                            <span>Полная конфиденциальность</span>
+                        </div>
+                    </div>
+
+                    <button class="cta-button" onclick="startTest()">
+                        Начать тест бесплатно
+                        <span class="button-arrow">→</span>
+                    </button>
+
+                    <p class="disclaimer">
+                        <small>Уже прошли тест <strong>12,847</strong> человек</small>
+                    </p>
+                </div>
+
+                <div class="hero-image">
+                    <div class="psychologist-card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop&crop=face" alt="Дина Перу">
+                        </div>
+                        <div class="card-content">
+                            <h3>Дина Перу</h3>
+                            <p>Клинический психолог<br>Опыт работы 8+ лет</p>
+                            <div class="rating">
+                                ⭐⭐⭐⭐⭐ <span>4.9 (2,341 отзыв)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Section -->
+    <section class="test-section" id="test-container" style="display: none;">
+        <div class="container">
+            <div class="test-wrapper">
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <span class="progress-text" id="progress-text">Вопрос 1 из 12</span>
+                </div>
+
+                <!-- Question Container -->
+                <div class="question-container" id="question-container">
+                    <!-- Questions will be inserted here by JavaScript -->
+                </div>
+
+                <!-- Navigation -->
+                <div class="test-navigation">
+                    <button class="nav-button secondary" id="prev-button" onclick="previousQuestion()" style="display: none;">
+                        ← Назад
+                    </button>
+                    <button class="nav-button primary" id="next-button" onclick="nextQuestion()" disabled>
+                        Далее →
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="results-container" style="display: none;">
+        <div class="container">
+            <div class="results-wrapper">
+                <div class="results-content" id="results-content">
+                    <!-- Results will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>Научный подход к эмоциональному здоровью</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-icon">🧠</div>
+                    <h3>Основано на исследованиях</h3>
+                    <p>Тест разработан на основе клинических шкал депрессии и тревожности, адаптированных для онлайн-формата</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">📊</div>
+                    <h3>Персональный анализ</h3>
+                    <p>Получите детальный разбор вашего состояния с конкретными рекомендациями для улучшения</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">🎯</div>
+                    <h3>Практические решения</h3>
+                    <p>Не просто диагностика, а реальные инструменты для работы с эмоциональным состоянием</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Дина Перу</h3>
+                    <p>Помогаю людям обрести эмоциональное равновесие и жить полной жизнью</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#privacy">Политика конфиденциальности</a>
+                    <a href="#terms">Условия использования</a>
+                    <a href="mailto:hello@dinaperu.com">hello@dinaperu.com</a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p><small>Данный тест не является медицинской диагностикой. При серьезных симптомах обратитесь к врачу.</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Email Modal -->
+    <div class="modal" id="email-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Получите персональные рекомендации</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Введите email, чтобы получить:</p>
+                <ul>
+                    <li>✅ Подробный анализ ваших результатов</li>
+                    <li>✅ Персональный план действий</li>
+                    <li>✅ Гайд "10 техник для улучшения настроения"</li>
+                </ul>
+                <form class="email-form" onsubmit="submitEmail(event)">
+                    <input type="email" placeholder="Ваш email" required id="email-input">
+                    <button type="submit" class="cta-button">Получить результаты</button>
+                </form>
+                <p class="privacy-note">
+                    <small>Мы не передаем данные третьим лицам и не спамим</small>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
